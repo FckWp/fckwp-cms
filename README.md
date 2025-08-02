@@ -23,12 +23,6 @@
 
 ---
 
-## 📸 Sneak Peek
-
-> Coming soon...
-
----
-
 ## 📦 Tech Stack
 
 - **Frontend**: React, Vite, Tailwind (Admin & Site)

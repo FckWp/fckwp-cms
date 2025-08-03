@@ -1,0 +1,32 @@
+{
+  "Navigation": "Navigáció",
+  "Settings": "Beállítások",
+  "Pages": "Oldalak",
+  "notFound": {
+    "title": "404 – Nem található",
+    "description": "Az oldal nem létezik.",
+    "message": "Sajnos a keresett oldal nem található. Lehet, hogy törölték, áthelyezték, vagy hibás a link.",
+    "backHome": "Vissza a főoldalra",
+    "goBack": "Vissza"
+  },
+  "adminLogin": {
+    "title": "Üdv újra",
+    "description": "Jelentkezz be az admin felületre",
+    "email": "Email",
+    "password": "Jelszó",
+    "forgotPassword": "Elfelejtetted a jelszót?",
+    "login": "Bejelentkezés",
+    "validation": {
+      "emailRequired": "Email megadása kötelező",
+      "emailInvalid": "Érvénytelen email cím",
+      "passwordRequired": "Jelszó megadása kötelező",
+      "passwordMin": "A jelszónak legalább 8 karakter hosszúnak kell lennie"
+    },
+    "errors": {
+      "invalidCredentials": "Érvénytelen email vagy jelszó",
+      "network": "Hálózati hiba, próbáld újra",
+      "unknown": "Valami hiba történt"
+    },
+    "success": "Sikeres bejelentkezés"
+  }
+}

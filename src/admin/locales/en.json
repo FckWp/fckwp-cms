@@ -1,0 +1,33 @@
+{
+  "Navigation": "Navigation",
+  "Settings": "Settings",
+  "Pages": "Pages",
+  "notFound": {
+    "title": "404 – Not Found",
+    "description": "The page does not exist.",
+    "message": "Sorry, the page you're looking for doesn't exist. It may have been deleted, moved, or the link is incorrect.",
+    "backHome": "Back to Home",
+    "goBack": "Go Back",
+    "search": "Search"
+  },
+  "adminLogin": {
+    "title": "Welcome back",
+    "description": "Login to the admin dashboard",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot your password?",
+    "login": "Login",
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "passwordRequired": "Password is required",
+      "passwordMin": "Password must be at least 8 characters"
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password",
+      "network": "Network error, please try again",
+      "unknown": "Something went wrong"
+    },
+    "success": "Logged in successfully"
+  }
+}

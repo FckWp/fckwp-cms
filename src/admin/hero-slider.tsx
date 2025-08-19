@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import HeroSlider, { HeroSlide } from '@/components/HeroSlider';
+import HeroSlider, { type HeroSlide } from '@/components/HeroSlider';
 import { Plus, Trash2 } from 'lucide-react';
 
 export default function HeroSliderBuilder() {

@@ -35,6 +35,7 @@
     "services": "Szolgáltatások",
     "serviceName": "Szolgáltatás neve",
     "duration": "Időtartam (perc)",
-    "calendar": "Naptár"
+    "calendar": "Naptár",
+    "addService": "Szolgáltatás hozzáadása"
   }
 }

@@ -36,6 +36,7 @@
     "services": "Services",
     "serviceName": "Service Name",
     "duration": "Duration (minutes)",
-    "calendar": "Calendar"
+    "calendar": "Calendar",
+    "addService": "Add Service"
   }
 }

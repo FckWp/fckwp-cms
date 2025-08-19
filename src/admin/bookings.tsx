@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/table';
 import { Plus, Trash2 } from 'lucide-react';
 
+
 interface Service {
   id: string;
   name: string;
@@ -209,3 +210,105 @@ export default function AdminBookings() {
     </SidebarProvider>
   );
 }
+
+const calendarDays = Array.from({ length: daysInMonth }).map((_, i) => new Date(year, month, i + 1));
+
+  return (
+    <div className="p-4 space-y-4">
+      <Card>
+        <CardHeader>
+          <CardTitle>{t('bookings.workingHours')}</CardTitle>
+        </CardHeader>
+        <CardContent className="flex items-center space-x-2">
+          <Input
+            type="time"
+            value={workingHours.start}
+            onChange={(e) => setWorkingHours({ ...workingHours, start: e.target.value })}
+          />
+          <span>-</span>
+          <Input
+            type="time"
+            value={workingHours.end}
+            onChange={(e) => setWorkingHours({ ...workingHours, end: e.target.value })}
+          />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>{t('bookings.services')}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="flex space-x-2 mb-4">
+            <Input
+              placeholder={t('bookings.serviceName') ?? ''}
+              value={newService.name}
+              onChange={(e) => setNewService({ ...newService, name: e.target.value })}
+            />
+            <Input
+              type="number"
+              placeholder={t('bookings.duration') ?? ''}
+              value={newService.duration}
+              onChange={(e) => setNewService({ ...newService, duration: Number(e.target.value) })}
+            />
+            <Button onClick={addService} size="icon">
+              <Plus className="h-4 w-4" />
+            </Button>
+          </div>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>{t('bookings.serviceName')}</TableHead>
+                <TableHead>{t('bookings.duration')}</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {services.map((s) => (
+                <TableRow key={s.id}>
+                  <TableCell>{s.name}</TableCell>
+                  <TableCell>{s.duration}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>{t('bookings.calendar')}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-7 text-center font-medium mb-2">
+            {weekDays.map((d, i) => (
+              <div key={i}>{d}</div>
+            ))}
+          </div>
+          <div className="grid grid-cols-7 gap-2">
+            {blankDays.map((_, i) => (
+              <div key={`b${i}`} />
+            ))}
+            {calendarDays.map((date) => {
+              const dateStr = date.toISOString().slice(0, 10);
+              const dayBookings = bookings.filter((b) => b.date === dateStr);
+              return (
+                <div key={dateStr} className="border rounded p-1 h-24 text-left">
+                  <div className="text-xs font-bold">{date.getDate()}</div>
+                  {dayBookings.map((b) => {
+                    const service = services.find((s) => s.id === b.serviceId);
+                    return (
+                      <div key={b.id} className="text-[10px] truncate">
+                        {b.time} {service?.name}
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+

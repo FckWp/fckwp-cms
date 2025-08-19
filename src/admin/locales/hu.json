@@ -28,5 +28,13 @@
       "unknown": "Valami hiba történt"
     },
     "success": "Sikeres bejelentkezés"
+  },
+  "bookings": {
+    "menu": "Foglalások",
+    "workingHours": "Munkaidő",
+    "services": "Szolgáltatások",
+    "serviceName": "Szolgáltatás neve",
+    "duration": "Időtartam (perc)",
+    "calendar": "Naptár"
   }
 }

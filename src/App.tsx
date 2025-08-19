@@ -3,6 +3,7 @@ import Admin from './admin';
 import AdminPages from './admin/pages';
 import HeroSliderBuilder from './admin/hero-slider';
 import AdminLogin from './admin/login';
+import AdminBookings from './admin/bookings';
 import ProtectedAdminRoute from './ProtectedAdminRoute';
 // @ts-expect-error - NotFound is dynamically generated
 import { NotFound } from '@/components/NotFound';
@@ -21,6 +22,10 @@ function App() {
 
       <Route path="/admin/hero-slider">
         <ProtectedAdminRoute component={HeroSliderBuilder} />
+      </Route>
+
+      <Route path="/admin/bookings">
+        <ProtectedAdminRoute component={AdminBookings} />
       </Route>
 
       <Route path="/admin/login" component={AdminLogin} />

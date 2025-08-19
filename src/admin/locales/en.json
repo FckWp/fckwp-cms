@@ -29,5 +29,13 @@
       "unknown": "Something went wrong"
     },
     "success": "Logged in successfully"
+  },
+  "bookings": {
+    "menu": "Bookings",
+    "workingHours": "Working Hours",
+    "services": "Services",
+    "serviceName": "Service Name",
+    "duration": "Duration (minutes)",
+    "calendar": "Calendar"
   }
 }

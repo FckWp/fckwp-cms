@@ -18,6 +18,7 @@ import {
   FileText,
   Boxes,
   ImageIcon,
+  CalendarIcon,
 } from "lucide-react";
 export default function AppSidebar() {
   const { t } = useTranslation();
@@ -58,6 +59,14 @@ export default function AppSidebar() {
                   <SidebarMenuButton>
                     <ImageIcon className="h-4 w-4" />
                     <span>Hero Slider</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              </Link>
+              <Link to="/admin/bookings">
+                <SidebarMenuItem>
+                  <SidebarMenuButton>
+                    <CalendarIcon className="h-4 w-4" />
+                    <span>{t('bookings.menu')}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </Link>

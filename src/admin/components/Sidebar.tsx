@@ -9,8 +9,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarProvider,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -19,6 +17,7 @@ import {
   Settings,
   FileText,
   Boxes,
+  ImageIcon,
 } from "lucide-react";
 export default function AppSidebar() {
   const { t } = useTranslation();
@@ -51,6 +50,14 @@ export default function AppSidebar() {
                   <SidebarMenuButton>
                     <FileText className="h-4 w-4" />
                     <span>{t("Pages")}</span>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              </Link>
+              <Link to="/admin/hero-slider">
+                <SidebarMenuItem>
+                  <SidebarMenuButton>
+                    <ImageIcon className="h-4 w-4" />
+                    <span>Hero Slider</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               </Link>
